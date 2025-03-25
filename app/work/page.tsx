@@ -1,14 +1,14 @@
-import { Work_Sans } from 'next/font/google'
 import React from 'react'
 import WorkHeader from './Components/workHeader'
+import SliderImages from './Components/sliderImages'
 
 export default function Work
 () {
   return (
-    <div>
+    <div className=' bg-[#000000] '>
       
   <WorkHeader/>
-        
+        <SliderImages/>
     </div>
   )
 }
