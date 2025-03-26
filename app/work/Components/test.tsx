@@ -30,7 +30,7 @@ export default function Test() {
                            src={item.img}
                            alt="Picture of the author"
                            layout="fill"
-                           objectFit="cover"
+                           
                            className={`rounded-lg w-full h-full relative `}
                            />
                         </div>

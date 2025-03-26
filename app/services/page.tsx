@@ -1,5 +1,6 @@
 import Image from "next/image"
-import PartnersSection from "@/components/services/partner-section"
+import PartnersGrid from "../components/services/PartnersGrid"
+// import PartnersSection from "/components/services/partner-section"
 
 export default function ServicesPage() {
   return (
@@ -11,7 +12,7 @@ export default function ServicesPage() {
             <Image src="/images/culture.jpg" alt="Culture" fill className="object-cover" />
             <div className="absolute inset-0 bg-black/30 hover:bg-black/40 transition-all duration-300">
               <div className="absolute bottom-20 left-10">
-                <h2 className="text-4xl md:text-5xl font-serif">Culture</h2>
+                <h2 className="text-4xl md:text-5xl  font-serif">Culture</h2>
               </div>
             </div>
           </div>
@@ -37,7 +38,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <PartnersSection />
+      <PartnersGrid/>
     </main>
   )
 }
