@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function VideoSection() {
   return (
-    <div className='relative w-full h-screen'>
+    <div className='relative w-full h-[600px] '>
       <video 
         autoPlay 
         loop 
         muted 
-        className='absolute top-0 left-0 w-full h-[600px] object-cover'>
+        className='absolute top-0 left-0 w-full h-full object-cover'>
         <source src='/video.mp4' type="video/mp4"/>
       </video>
     
