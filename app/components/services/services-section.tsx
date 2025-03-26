@@ -18,7 +18,7 @@ const ServiceCard = ({ title, imageSrc, href }: ServiceCardProps) => {
       />
       <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300">
         <div className="absolute bottom-20 left-10">
-          <h2 className="text-4xl md:text-5xl font-serif text-white">{title}</h2>
+          <h2 className="text-4xl md:text-5xl font-serif text-white">{title} </h2>
         </div>
       </div>
     </Link>
