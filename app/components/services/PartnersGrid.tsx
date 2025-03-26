@@ -27,9 +27,9 @@ const partnerLogos: PartnerLogo[] = [
   { src: "/images/partners/g-shock.svg", alt: "G-Shock" },
   { src: "/images/partners/white-claw.svg", alt: "White Claw" },
   { src: "/images/partners/canon.svg", alt: "Beats by Dr. Dre" },
-  { src: "/images/partners/pabst.svg", alt: "Pabst Blue Ribbon" },
-  { src: "/images/partners/sun.png", alt: "Sun Bum" },
-  { src: "/images/partners/adidas-4.svg", alt: "Adidas" },
+  { src: "/images/partners/canon.svg", alt: "Pabst Blue Ribbon" },
+  { src: "/images/partners/Sun.png", alt: "Sun Bum" },
+  { src: "/images/partners/adidas.svg", alt: "Adidas" },
 ]
 
 const PartnerLogo = ({ logo, index }: { logo: PartnerLogo; index: number }) => {
