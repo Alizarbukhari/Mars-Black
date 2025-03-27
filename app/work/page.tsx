@@ -11,6 +11,9 @@ export default function Work
       <div><WorkHeader/></div>
       {/* <div><SliderImages/></div> */}
       <div className='mt-2'><Test/></div>
+      <div className='mt-2'>
+        <SliderImages/>
+      </div>
       
       
   

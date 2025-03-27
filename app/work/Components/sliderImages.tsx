@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { slideImg } from '../../../data/utils/workslidedata';
+import { socialSlid } from '../../../data/utils/workslidedata';
+import Image from 'next/image';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -30,38 +31,9 @@ export default function SliderImages() {
       }}
     >
       {/* Custom Navigation Buttons */}
-      <button
-        className="swiper-button-prev custom-nav"
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '10px',
-          zIndex: 10,
-          transform: 'translateY(-50%)',
-          background: 'transparent',
-          border: 'none',
-          cursor: 'pointer',
-        }}
-        onClick={handlePrevClick} // Handle reverse direction
-      >
-        <MdKeyboardArrowLeft size={40} />
-      </button>
-      <button
-        className="swiper-button-next custom-nav"
-        style={{
-          position: 'absolute',
-          top: '50%',
-          right: '10px',
-          zIndex: 10,
-          transform: 'translateY(-50%)',
-          background: 'transparent',
-          border: 'none',
-          cursor: 'pointer',
-        }}
-        onClick={handleNextClick} // Keep direction normal
-      >
-        <MdKeyboardArrowRight size={40} />
-      </button>
+             {/* Navigation Arrows */}
+             <div onClick={handlePrevClick} className="arrow-prev absolute top-4 left-4 z-20 text-white"><MdKeyboardArrowLeft size={60} /></div>
+                <div  onClick={handleNextClick} className="arrow-next absolute top-4 right-4 z-20 text-white"><MdKeyboardArrowRight size={60} /></div>
       <Swiper
         modules={[Navigation]}
         navigation={{
@@ -70,21 +42,18 @@ export default function SliderImages() {
         }}
         loop={true} // Enable looping
         centeredSlides={true}
-        slidesPerView={2}
+        slidesPerView={5}
         direction={swiperDirection} // Set the direction based on button click
         style={{ padding: ' 0' }}
       >
-        {slideImg.map((item) => (
+        {socialSlid.map((item) => (
           <SwiperSlide key={item.id}>
-            <img
+            <Image
               src={item.img}
               alt={`Slide ${item.id}`}
-              style={{
-                width: '100%',
-                height: '432px',
-                objectFit: 'cover',
-                borderRadius: '10px',
-              }}
+              width={221}
+              height = {124}
+              className=' w-[221px] h-[124px] '
             />
           </SwiperSlide>
         ))}
