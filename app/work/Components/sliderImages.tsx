@@ -71,7 +71,7 @@ export default function SliderImages() {
                 className=" w-[300px] h-[124px]" // Maintain aspect ratio
                 priority
               />
-            </div>
+            </div>z
             </div>
           </SwiperSlide>
         ))}
