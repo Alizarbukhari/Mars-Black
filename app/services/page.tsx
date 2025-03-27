@@ -1,5 +1,4 @@
 import Image from "next/image"
-import PartnersSection from "@/components/services/partner-section"
 
 export default function ServicesPage() {
   return (
@@ -37,7 +36,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <PartnersSection />
     </main>
   )
 }
