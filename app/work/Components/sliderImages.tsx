@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
@@ -11,53 +11,73 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function SliderImages() {
-  const [swiperDirection, setSwiperDirection] = useState<'horizontal' | 'vertical'>('horizontal'); // Keep track of direction
-
-  const handlePrevClick = () => {
-    setSwiperDirection('horizontal'); // Set direction to normal
-  };
-
-  const handleNextClick = () => {
-    setSwiperDirection('horizontal'); // Set direction to normal
-  };
+  const prevRef = useRef<HTMLDivElement>(null);
+  const nextRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div
-      className="slider-container bg-[#000000] "
+    <div className='h-[300px] w-full'>  
+    <div className=' mb-6 ml-6'> 
+    <h1 className=' text-[20px] font-sans text-red-50'> SURF </h1>
+
+    </div>
+      <div
+      className="slider-container bg-[#000000] h-[200px] " // Fixed container height
       style={{
         position: 'relative',
         width: '100%',
         margin: '0 auto',
+        overflow: 'hidden',
       }}
     >
       {/* Custom Navigation Buttons */}
-             {/* Navigation Arrows */}
-             <div onClick={handlePrevClick} className="arrow-prev absolute top-4 left-4 z-20 text-white"><MdKeyboardArrowLeft size={60} /></div>
-                <div  onClick={handleNextClick} className="arrow-next absolute top-4 right-4 z-20 text-white"><MdKeyboardArrowRight size={60} /></div>
+      <div ref={prevRef} className="arrow-prev absolute top-2-translate-y-1/2 left-4 z-20 text-white cursor-pointer">
+        <MdKeyboardArrowLeft size={60} />
+      </div>
+      <div ref={nextRef} className="arrow-next absolute top-8 -translate-y-1/2 right-4 z-20 text-white cursor-pointer">
+        <MdKeyboardArrowRight size={60} />
+      </div>
+
       <Swiper
         modules={[Navigation]}
         navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
         }}
-        loop={true} // Enable looping
+        onBeforeInit={(swiper) => {
+          // @ts-ignore
+          swiper.params.navigation.prevEl = prevRef.current;
+          // @ts-ignore
+          swiper.params.navigation.nextEl = nextRef.current;
+        }}
+        loop={true}
         centeredSlides={true}
         slidesPerView={5}
-        direction={swiperDirection} // Set the direction based on button click
-        style={{ padding: ' 0' }}
+        spaceBetween={30} // Add spacing between slides
+        direction="horizontal"
+        className="h-full" // Full height for Swiper
       >
         {socialSlid.map((item) => (
-          <SwiperSlide key={item.id}>
-            <Image
-              src={item.img}
-              alt={`Slide ${item.id}`}
-              width={221}
-              height = {124}
-              className=' w-[221px] h-[124px] '
-            />
+          <SwiperSlide 
+            key={item.id}
+            className="h-[124px] flex items-center justify-center" // Fixed slide height
+          >
+            <div className="relative w-full h-full transition-opacity duration-300 ease-in-out hover:opacity-75"
+              style={{ willChange: 'opacity' }}
+>  <div className="absolute inset-0 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Image
+                src={item.img}
+                alt={`Slide ${item.id}`}
+                layout="fill"
+                className=" w-[300px] h-[124px]" // Maintain aspect ratio
+                priority
+              />
+            </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
+    </div>
+
   );
 }
