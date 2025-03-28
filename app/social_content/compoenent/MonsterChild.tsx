@@ -2,13 +2,13 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { socialText, socialSlid, socialSlid2, socialSlid3, socialSlid4, socialSlid5 } from '../../../data/utils/workslidedata';
+import { socialText, socialSlid, socialSlid2, socialSlid3, socialSlid4, socialSlid5 } from '../../../data/utils/socailslidedata2';
 import Image from 'next/image';
 import 'swiper/css';
 
 const allSlides = [socialSlid, socialSlid2, socialSlid3, socialSlid4, socialSlid5];
 
-export default function SliderImages() {
+export default function MonsterChild() {
   return (
     <div className='w-full bg-black'>
       {socialText.map((textItem, index) => (
@@ -97,8 +97,8 @@ function SliderSection({ title, slides }: SliderSectionProps) {
           ref={swiperRef}
           initialSlide={total} // Start from the middle copy
           loop={false}     // Loop is handled manually
-          slidesPerView={6}
-          spaceBetween={5}
+          slidesPerView={7}
+          spaceBetween={1}
           className="h-full shadow-none brightness-100 flex"
         >
           {infiniteSlides.map((item, index) => (
@@ -107,13 +107,13 @@ function SliderSection({ title, slides }: SliderSectionProps) {
               className="h-[124px] flex items-center justify-center shadow-none"
             >
               <div className="relative w-full h-full flex transition-all duration-300 hover:scale-105">
-                <div className="w-[250px] h-[124px]">
+                <div className="w-[200px] h-[274px]">
                   <Image
                     src={item.img}
                     alt={`Slide ${item.id}`}
-                    width={250}
-                    height={124}
-                    className="w-[250px] h-[124px] flex"
+                    width={181}
+                    height={274}
+                    className="w-[200px] h-[274px] flex"
                     priority
                   />
                 </div>

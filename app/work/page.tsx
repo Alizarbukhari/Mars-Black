@@ -14,6 +14,9 @@ export default function Work
       <div className='mt-8 '>
         <SliderImages/>
       </div>
+      <div className='h-2'>
+
+      </div>
       
       
   

@@ -1,4 +1,7 @@
 
+
+
+
 export const socialSlid = [{
     id: 1,
     img: "/worksImages/work_social_images/s12.jpg"
@@ -30,10 +33,10 @@ export const socialSlid = [{
     img:'/worksImages/work_social_images/s9.jpg'
 },{
     id:10,
-    img:'/worksImages/work_social_images/s120.jpg'
+    img:'/worksImages/work_social_images/s20.jpg'
 },{
     id:11,
-    img:'/worksImages/work_social_images/s121.jpg'
+    img:'/worksImages/work_social_images/s12.jpg'
 }]
 
 export const socialSlid2= [{
@@ -67,10 +70,10 @@ export const socialSlid2= [{
     img:'/worksImages/work_social_images/s9.jpg'
 },{
     id:10,
-    img:'/worksImages/work_social_images/s120.jpg'
+    img:'/worksImages/work_social_images/s20.jpg'
 },{
     id:11,
-    img:'/worksImages/work_social_images/s121.jpg'
+    img:'/worksImages/work_social_images/s12.jpg'
 }]
 export const socialSlid3 = [{
     id: 1,
@@ -103,10 +106,10 @@ export const socialSlid3 = [{
     img:'/worksImages/work_social_images/s9.jpg'
 },{
     id:10,
-    img:'/worksImages/work_social_images/s120.jpg'
+    img:'/worksImages/work_social_images/s20.jpg'
 },{
     id:11,
-    img:'/worksImages/work_social_images/s121.jpg'
+    img:'/worksImages/work_social_images/s12.jpg'
 }] 
 export const socialSlid4= [{
     id: 1,
@@ -139,10 +142,10 @@ export const socialSlid4= [{
     img:'/worksImages/work_social_images/s9.jpg'
 },{
     id:10,
-    img:'/worksImages/work_social_images/s120.jpg'
+    img:'/worksImages/work_social_images/s20.jpg'
 },{
     id:11,
-    img:'/worksImages/work_social_images/s121.jpg'
+    img:'/worksImages/work_social_images/s12.jpg'
 }]
 export const socialSlid5 = [{
     id: 1,
@@ -169,7 +172,7 @@ export const socialSlid5 = [{
     img:'/worksImages/work_social_images/s7.jpg'
 },{
     id:8,
-    img:'/worksImages/work_social_images/ss19.jpg'
+    img:'/worksImages/work_social_images/s19.jpg'
 },{
     id:9,
     img:'/worksImages/work_social_images/s9.jpg'
@@ -180,3 +183,26 @@ export const socialSlid5 = [{
     id:11,
     img:'/worksImages/work_social_images/s12.jpg'
 }]
+export const socialText = [
+    {
+        id: 1,
+        text: 'Monster Children Originals'
+    },
+    {
+        id: 2,
+        text: "Monster Children Originals"
+    },
+    {
+        id: 3,
+        text: "Monster Children Originals"
+    },
+    {
+        id: 4,
+        text: "Monster Children Originals"
+    },
+    {
+        id: 5,
+        text: "Monster Children Originals"
+    }
+  ]
+  

@@ -2,11 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { socicalData } from "./../../data/utils/socialData";
 import { WorkSlideType } from "@/data/types/workSlideTypes";
+import MonsterChild from "./compoenent/MonsterChild";
 export default function Home() {
   return (
     <section>
+
+
+
+<div className=" bg-black ">
+      <MonsterChild/>  
+        </div>
+     
       {/* Main Container */}
-      <div className="flex flex-col w-full px-8 pt-[16rem] pb-[8rem]">
+      <div className="flex  flex-col w-full px-8 pt-[16rem] pb-[8rem]">
         {/* Social Section */}
         <div className="w-full  flex">
           <div className="flex flex-1 justify-start items-start max-w-[50%]">
@@ -67,6 +75,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+   
     </section>
   )
 

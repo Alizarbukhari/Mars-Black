@@ -102,3 +102,28 @@ export const socicalData = [
     image: "/assets/socialContent/image.webp",
   },
 ];
+
+
+
+export const socialText = [
+  {
+      id: 1,
+      text: 'SURF'
+  },
+  {
+      id: 2,
+      text: "Skateboarding"
+  },
+  {
+      id: 3,
+      text: "People"
+  },
+  {
+      id: 4,
+      text: "Team Average"
+  },
+  {
+      id: 5,
+      text: "Table Talk Series"
+  }
+]
