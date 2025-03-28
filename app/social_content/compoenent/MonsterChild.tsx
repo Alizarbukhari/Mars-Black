@@ -86,11 +86,11 @@ function SliderSection({ title, slides }: SliderSectionProps) {
       
       <div className="slider-container bg-[#000000] relative w-full mx-auto overflow-hidden">
         {/* Custom Navigation Arrows */}
-        <div onClick={handlePrev} className="arrow-prev absolute transition-opacity duration-300 ease-in-out hover:scale-125 top-6 -translate-y-1/2 left-4 z-20 text-white cursor-pointer">
-          <MdKeyboardArrowLeft size={60} />
+        <div onClick={handlePrev} className="arrow-prev absolute transition-opacity duration-300 ease-in-out hover:scale-125 top-[50%] -translate-y-1/2 left-4 z-20 text-white cursor-pointer">
+          <MdKeyboardArrowLeft size={40} />
         </div>
-        <div onClick={handleNext} className="arrow-next absolute transition-opacity duration-300 ease-in-out hover:scale-125 top-6 -translate-y-1/2 right-1 z-20 text-white cursor-pointer">
-          <MdKeyboardArrowRight size={60} />
+        <div onClick={handleNext} className="arrow-next absolute transition-opacity duration-300 ease-in-out hover:scale-125 top-[50%] -translate-y-1/2 right-1 z-20 text-white cursor-pointer">
+          <MdKeyboardArrowRight size={40} />
         </div>
 
         <Swiper
@@ -99,6 +99,7 @@ function SliderSection({ title, slides }: SliderSectionProps) {
           loop={false}     // Loop is handled manually
           slidesPerView={7}
           spaceBetween={1}
+          
           className="h-full shadow-none brightness-100 flex"
         >
           {infiniteSlides.map((item, index) => (
