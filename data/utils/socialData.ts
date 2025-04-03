@@ -95,7 +95,11 @@ export const socicalData = [
       title: "BUSH",
       instaName: "@bush",
       image: "/assets/socialContent/man.webp",
-    }
+    },{
+      id: 15,
+      title: "FLUM",
+      instaName: "@Flum",
+      image: "/assets/socialContent/flum.webp"}
 ];
 
 
