@@ -15,11 +15,11 @@ export default function SocailContent() {
         {/* Social Section */}
         <div className="w-full  flex">
           <div className="flex flex-1 justify-start items-start max-w-[50%]">
-            <h1 className="z-[2] tracking-[.2rem] uppercase mix-blend-exclusion text-[4.2rem] font-normal leading-[1.05]">
+            <h1 className="z-[2] tracking-[.2rem] text-white uppercase mix-blend-exclusion text-[4.2rem] font-normal leading-[1.05]">
               Social
             </h1>
           </div>
-          <div className="flex flex-col flex-1 justify-start items-start max-w-[50%]">
+          <div className="flex flex-col text-white flex-1 justify-start items-start max-w-[50%]">
             <p className="text-normal leading-[1.65] max-w-[42rem] text-[.9rem] font-thin">
               We craft compelling content that resonates across all platforms,
               sparking engagement and driving meaningful conversations. By
