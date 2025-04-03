@@ -62,9 +62,10 @@ const config: Config = {
           ring: "hsl(var(--sidebar-ring))",
         },
         fontFamily: {
-          sans: ["var(--font-sans)"],
-          serif: ["var(--font-serif)"],
+          sans: "var(--font-sans)",  
+          serif: "var(--font-serif)",
         },
+        
       },
       borderRadius: {
         lg: "var(--radius)",
