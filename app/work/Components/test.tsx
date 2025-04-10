@@ -38,8 +38,8 @@ export default function Test() {
                 ))}
 
                 {/* Navigation Arrows */}
-                <div className="arrow-prev absolute top-1/2 left-4 z-20 text-white"><MdKeyboardArrowLeft size={60} /></div>
-                <div className="arrow-next absolute top-1/2 right-4 z-20 text-white"><MdKeyboardArrowRight size={60} /></div>
+                {/* <div className="arrow-prev absolute top-1/2 left-4 z-20 text-white"><MdKeyboardArrowLeft size={60} /></div>
+                <div className="arrow-next absolute top-1/2 right-4 z-20 text-white"><MdKeyboardArrowRight size={60} /></div> */}
             </Swiper>
 
             {/* Required CSS for slide positioning */}
@@ -51,7 +51,7 @@ export default function Test() {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5); /* 50% opacity black layer */
+
             pointer-events: none; /* Click through allow kare */
             transition: opacity 0.3s ease; /* Smooth effect ke liye */
             }
@@ -73,3 +73,5 @@ export default function Test() {
         </div>
     );
 }
+
+//             background: rgba(0,0,0,0.5); /* 50% opacity black layer */  remove because of overlay
