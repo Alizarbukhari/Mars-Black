@@ -8,11 +8,11 @@ export default function Text_Backround_Motion() {
       id: 1,
       text: "creative",
       image: [
-        "/servies_images/header1.png",
-        "/servies_images/header2.png",
-        "/servies_images/header3.png",
-        "/servies_images/header2.png",
-        "/servies_images/header1.png",
+        "/servies_images/social1.jpeg",
+        "/servies_images/social2.jpeg",
+        "/servies_images/social3.jpeg",
+        "/servies_images/social4.jpeg",
+        "/servies_images/social5.jpeg",
       ],
       first_text: [
         "Creative Direction",
@@ -32,11 +32,11 @@ export default function Text_Backround_Motion() {
       id: 2,
       text: "social",
       image: [
-        "/servies_images/header1.png",
-        "/servies_images/header2.png",
-        "/servies_images/header3.png",
-        "/servies_images/header2.png",
-        "/servies_images/header1.png",
+        "/servies_images/social1.jpeg",
+        "/servies_images/social2.jpeg",
+        "/servies_images/social3.jpeg",
+        "/servies_images/social4.jpeg",
+        "/servies_images/social5.jpeg",
       ],
       first_text: [
         "Creative Direction",
@@ -56,11 +56,35 @@ export default function Text_Backround_Motion() {
       id: 3,
       text: "communications",
       image: [
-        "/servies_images/header1.png",
-        "/servies_images/header2.png",
-        "/servies_images/header3.png",
-        "/servies_images/header2.png",
-        "/servies_images/header1.png",
+        "/servies_images/social1.jpeg",
+        "/servies_images/social2.jpeg",
+        "/servies_images/social3.jpeg",
+        "/servies_images/social4.jpeg",
+        "/servies_images/social5.jpeg",
+      ],
+      first_text: [
+        "Creative Direction",
+        "Brand Identity",
+        "Logomarks",
+        "cover art",
+        "merchandise",
+      ],
+      second_text: [
+        "poster design",
+        "packaging direction",
+        "video editing",
+        "website design",
+      ],
+    },
+    {
+      id: 3,
+      text: "Creative",
+      image: [
+        "/servies_images/social1.jpeg",
+        "/servies_images/social2.jpeg",
+        "/servies_images/social3.jpeg",
+        "/servies_images/social4.jpeg",
+        "/servies_images/social5.jpeg",
       ],
       first_text: [
         "Creative Direction",
@@ -102,7 +126,7 @@ w-6 h-6 mt-2 bg-white text-black flex items-center justify-center rounded-full s
                 <div className="relative z-20 inline-flex group w-fit">
                   {/* Background Layer */}
                   <div
-                    className="absolute inset-y-0 left-0 w-0 bg-white 
+                    className="absolute inset-y-0 left-0 w-0 bg-yellow-300 
                     transition-all duration-500 group-hover:w-full 
                     -z-10 h-[110%] top-[-5%] rounded-sm"
                   ></div>
