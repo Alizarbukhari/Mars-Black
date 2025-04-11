@@ -20,7 +20,7 @@ const allSlides = [
   socialSlid5,
 ];
 
-export default function SliderImages() {
+export default function SliderImagesWIthText() {
   return (
     <div className="w-full bg-black">
       {socialText.map((textItem, index) => (
@@ -65,31 +65,6 @@ function SliderSection({ title, slides }: SliderSectionProps) {
   // Duplicate slides three times to simulate infinite scrolling
   const infiniteSlides = [...baseSlides, ...baseSlides, ...baseSlides];
 
-  // Navigation: always slide in the same direction
-  const handlePrev = () => {
-    const swiper = swiperRef.current.swiper;
-    let newIndex = swiper.activeIndex - 6;
-    swiper.slideTo(newIndex, 600);
-    // If index goes before the first copy, reset to the equivalent index in the middle copy without animation
-    if (newIndex < total) {
-      swiper.once("transitionEnd", () => {
-        swiper.slideTo(newIndex + total, 0);
-      });
-    }
-  };
-
-  const handleNext = () => {
-    const swiper = swiperRef.current.swiper;
-    let newIndex = swiper.activeIndex + 6;
-    swiper.slideTo(newIndex, 600);
-    // If index exceeds the middle copy, reset back to middle copy without animation
-    if (newIndex >= total * 2) {
-      swiper.once("transitionEnd", () => {
-        swiper.slideTo(newIndex - total, 0);
-      });
-    }
-  };
-
   return (
     <section className="mb-2">
       <div className="slider-container bg-[#000000] relative w-full mx-auto overflow-hidden py-11">
@@ -107,16 +82,26 @@ function SliderSection({ title, slides }: SliderSectionProps) {
               className="h-[124px] flex items-center justify-center shadow-none"
             >
               <div className="relative w-full h-full flex transition-all duration-300 hover:scale-105">
-                <div className="w-[250px] h-[124px]">
+                <div className="">
                   <Image
-                    src={item.img}
+                    // src={item.img}
+                    src={"/assets/img.png"}
                     alt={`Slide ${item.id}`}
-                    width={250}
-                    height={124}
-                    className="w-[250px] h-[124px] flex rounded"
+                    width={293}
+                    height={457}
+                    className="] flex rounded"
                     priority
                   />
                 </div>
+              </div>
+              <div className="text-white flex items-center justify-end ">
+                <Image
+                  src="/assets/Heart.png"
+                  alt={"heart"}
+                  width={25}
+                  height={22}
+                />
+                <div>777</div>
               </div>
             </SwiperSlide>
           ))}

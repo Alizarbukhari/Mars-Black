@@ -5,28 +5,28 @@ export  const mediaWallData = [
   },
   {
     id: 2,
-    image: "/assets/mediaWall/2.jpg",
+    image: "/assets/big3.webp",
   },{
     id: 3,
-    image: "/assets/mediaWall/1.jpg",
+    image: "/assets/glass.webp",
   },
   {
     id: 4,
-    image: "/assets/mediaWall/2.jpg",
+    image: "/assets/man.webp",
   },{
     id: 5,
-    image: "/assets/mediaWall/1.jpg",
+    image: "/assets/bactaria.webp",
   },
   {
     id: 6,
-    image: "/assets/mediaWall/2.jpg",
+    image: "/assets/cuco.webp",
   },{
     id: 7,
-    image: "/assets/mediaWall/1.jpg",
+    image: "/assets/deset.webp",
   },
   {
     id: 8,
-    image: "/assets/mediaWall/2.jpg",
+    image: "/assets/flum.webp",
   },{
     id: 9,
     image: "/assets/mediaWall/1.jpg",
