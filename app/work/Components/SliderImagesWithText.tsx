@@ -73,7 +73,7 @@ function SliderSection({ title, slides }: SliderSectionProps) {
           initialSlide={total} // Start from the middle copy
           loop={false} // Loop is handled manually
           slidesPerView={6}
-          spaceBetween={5}
+          spaceBetween={20}
           className="h-full shadow-none brightness-100 flex"
         >
           {infiniteSlides.map((item, index) => (
@@ -81,7 +81,7 @@ function SliderSection({ title, slides }: SliderSectionProps) {
               key={index} // index used as key since duplicates exist
               className="h-[124px] flex items-center justify-center shadow-none"
             >
-              <div className="relative w-full h-full flex transition-all duration-300 hover:scale-105">
+              <div className="relative w-full h-full flex ">
                 <div className="">
                   <Image
                     // src={item.img}
@@ -101,9 +101,10 @@ function SliderSection({ title, slides }: SliderSectionProps) {
                   width={25}
                   height={22}
                 />
-                <div>777</div>
+                <div className="text-[32px] font-normal">777</div>
               </div>
             </SwiperSlide>
+            
           ))}
         </Swiper>
       </div>
