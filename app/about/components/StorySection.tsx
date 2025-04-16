@@ -1,100 +1,131 @@
 import Image from "next/image"
 
 export default function StorySection() {
+
   return (
     <div className="bg-black text-white min-h-screen w-full font-sans">
-      <div className="container mx-auto px-4 py-12 max-w-4xl">
-        <section className="flex flex-col gap-8">
-          {/* Header */}
-          <div className="text-center md:text-left">
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tight uppercase">
-              THE STORY
-              <br />
-              <span className="inline-block">
-                SO <span className="md:ml-16">FAR</span>
-              </span>
-            </h1>
-          </div>
-
-          {/* Story text */}
-          <div className="space-y-4 text-sm md:text-base opacity-80">
-            <p>
-              At our core, we are innovators and storytellers with a passion for creating meaningful experiences. Our
-              journey began with a simple idea that has evolved into the brand you see today. We've navigated
-              challenges, celebrated victories, and continuously refined our vision along the way.
-            </p>
-            <p>
-              What started as a small project between friends has grown into a movement that spans across cities and
-              communities. We believe in the power of collaboration and the impact that thoughtful design can have on
-              everyday life.
-            </p>
-            <p>
-              Our commitment to quality and authenticity remains unwavering as we continue to expand our horizons and
-              push the boundaries of what's possible. Every product we create is a testament to our dedication and the
-              values we hold dear.
-            </p>
-          </div>
-
-          {/* Badges */}
-          <div className="flex justify-center gap-6 py-4">
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-white text-black flex items-center justify-center">
-                <div className="text-[10px] md:text-xs font-bold text-center">
-                  <div>ESTABLISHED</div>
-                  <div>2020</div>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-green-500 text-white flex items-center justify-center">
-                <span className="text-2xl font-bold">M</span>
-              </div>
-              <span className="text-xs mt-2">LOS ANGELES | NEW YORK</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-white text-black flex items-center justify-center">
-                <div className="text-[10px] md:text-xs font-bold text-center">
-                  <div>MADE IN</div>
-                  <div>USA</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="w-full">
+      <div className="container mx-auto px-4 py-24 max-w-4xl">
+        <section className="flex flex-col">
+          {/* Header with Vector Image */}
+          <div className="relative">
             <Image
-              src="/about/devin.svg"
-              width={600}
-              height={300}
-              alt="People sitting on a bench"
-              className="w-full h-auto object-cover grayscale"
+              src="/about/vector.png"
+              width={1256}
+              height={543}
+              alt="Story header vector"
+              className="w-full h-auto"
+              priority
             />
-          </div>
 
-          {/* Team members */}
-          <div className="flex justify-between pt-4">
-            <div className="text-center">
-              <h3 className="font-bold">JAMES WALKER</h3>
-              <p className="text-xs text-gray-400">Co-Founder</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto relative">
-                <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-black">
-                    <div className="text-[8px] font-bold">POWERED BY</div>
-                    <div className="text-xs font-bold mt-1">PASSION</div>
-                  </div>
-                </div>
-                <p className="text-xs mt-1 text-center">02</p>
-              </div>
-            </div>
-            <div className="text-center">
-              <h3 className="font-bold">DEVIN ALTMAN</h3>
-              <p className="text-xs text-gray-400">Co-Founder</p>
-            </div>
+
           </div>
         </section>
+      </div>
+      {/* Story text moved inside the relative container */}
+      <div className={`text-[20px] flex-col`}>
+        <div className="flex flex-col items-center text-center justify-center">
+          <span>   At 02 Projects, we're all about pushing creative boundaries and making things that matter.
+            Born</span>
+          <span> from the minds of two friends, Jonah and Devin, who shared the same 2002 birth year,
+            02 is</span>
+          <span>more than just a name — it's a reflection of youthful energy,
+            an unwavering drive to create, and</span>
+          <span>a desire to learn and grow.
+            From day one, we've focused on bringing people together and telling</span>
+          <span>stories that matter.
+            Whether it's through films, photos, or immersive spaces, we're committed</span>
+          <span> to capturing the raw, real emotions that make us human,
+            while constantly expanding our </span>
+          <span> horizons and embracing new possibilities.</span>
+        </div>
+        <div className="flex flex-col items-center text-center justify-center">
+          <span> We’re not just a company, we’re a family of creators.
+            We build spaces and experiences where</span>
+          <span>creatives can feel at home, find inspiration,
+            and collaborate with like-minded people. Every</span>
+          <span>project, big or small, is rooted in authenticity,
+            fueled by curiosity, and driven by our shared</span>
+          <span>belief in creative expression.
+            From our films that take you on emotional journeys, to the</span>
+          <span>festivals we host that unite artists and storytellers,
+            we aim to make the world feel a little more</span>
+          <span>connected and a lot more creative.</span>
+
+        </div>
+        <div className="flex flex-col items-center text-center justify-center">
+          <span> Looking ahead, we’re not slowing down. Our vision is bold.
+            We want to build more spaces for</span>
+          <span>creation, expand our reach through workshops and educational programs,
+            and inspire the next</span>
+          <span>generation of visionary creators. The possibilities are endless, and we’re here to make them</span>
+          <span>happen.
+            With each new project, we’re not just telling stories — we’re shaping a culture, fostering</span>
+          <span>community,
+            and building a legacy that’ll live on for years to come.</span>
+
+        </div>
+      </div>
+
+      {/* Badges */}
+     
+      {/* Image */}
+      <div className="w-full">
+       
+      </div>
+      {/* image div */}
+      <div className="w-full flex justify-center">
+        <div className="w-[80%] bg-green-500">
+        <Image
+          src="/about/devin.svg"
+          width={1827}
+          height={1059}
+          alt="People sitting on a bench"
+          className="w-full h-auto object-cover grayscale"
+        />
+
+        </div>
+      </div>
+      {/* Team members */}
+      <div className=" w-full flex justify-center items-center">
+      <div className="w-[75%] flex items-center   justify-between py-16 mt-11 ">
+        <div className="text-center text-[25px]">
+          <h3 className="font-extrabold mb-7">
+            JONAH MAZER
+          </h3>
+         
+          <div className="text-[20px] leading-7">
+          <p className=" text-[20px]">
+            Co-Founder
+          </p>
+            <p>jonah@02projects.com</p>
+            <p>(818) 730-9912</p>
+            <p>New York, NY 10012</p>
+          </div>
+        </div>
+
+        <div className="text-center ">
+          <div className="mx-auto relative">
+            <Image
+              src="/about/lungs-icon.png"
+              width={320}
+              height={320}
+              alt="Powered by passion"
+              className="object-contain"
+            />
+          </div>
+        </div>
+
+        <div className="text-center text-[25px]  ">
+          <h3  className="font-bold mb-7"> DEVIN ALTMAN</h3>
+         
+          <div className="text-[20px] leading-7 ">
+          <p className="text-[20px]">Co-Founder</p>
+            <p>devin@02projects.com</p>
+            <p>(818) 312-5502</p>
+            <p>Los Angeles, CA 91367</p>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   )
