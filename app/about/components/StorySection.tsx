@@ -1,4 +1,5 @@
 import Image from "next/image"
+import  Badges  from "./badges";
 
 export default function StorySection() {
 
@@ -67,65 +68,65 @@ export default function StorySection() {
       </div>
 
       {/* Badges */}
-     
+      <Badges />
       {/* Image */}
       <div className="w-full">
-       
+
       </div>
       {/* image div */}
       <div className="w-full flex justify-center">
         <div className="w-[80%] bg-green-500">
-        <Image
-          src="/about/devin.svg"
-          width={1827}
-          height={1059}
-          alt="People sitting on a bench"
-          className="w-full h-auto object-cover grayscale"
-        />
+          <Image
+            src="/about/devin.svg"
+            width={1827}
+            height={1059}
+            alt="People sitting on a bench"
+            className="w-full h-auto object-cover grayscale"
+          />
 
         </div>
       </div>
       {/* Team members */}
       <div className=" w-full flex justify-center items-center">
-      <div className="w-[75%] flex items-center   justify-between py-16 mt-11 ">
-        <div className="text-center text-[25px]">
-          <h3 className="font-extrabold mb-7">
-            JONAH MAZER
-          </h3>
-         
-          <div className="text-[20px] leading-7">
-          <p className=" text-[20px]">
-            Co-Founder
-          </p>
-            <p>jonah@02projects.com</p>
-            <p>(818) 730-9912</p>
-            <p>New York, NY 10012</p>
-          </div>
-        </div>
+        <div className="w-[75%] flex items-center   justify-between py-16 mt-11 ">
+          <div className="text-center text-[25px]">
+            <h3 className="font-extrabold mb-7">
+              JONAH MAZER
+            </h3>
 
-        <div className="text-center ">
-          <div className="mx-auto relative">
-            <Image
-              src="/about/lungs-icon.png"
-              width={320}
-              height={320}
-              alt="Powered by passion"
-              className="object-contain"
-            />
+            <div className="text-[20px] leading-7">
+              <p className=" text-[20px]">
+                Co-Founder
+              </p>
+              <p>jonah@02projects.com</p>
+              <p>(818) 730-9912</p>
+              <p>New York, NY 10012</p>
+            </div>
           </div>
-        </div>
 
-        <div className="text-center text-[25px]  ">
-          <h3  className="font-bold mb-7"> DEVIN ALTMAN</h3>
-         
-          <div className="text-[20px] leading-7 ">
-          <p className="text-[20px]">Co-Founder</p>
-            <p>devin@02projects.com</p>
-            <p>(818) 312-5502</p>
-            <p>Los Angeles, CA 91367</p>
+          <div className="text-center ">
+            <div className="mx-auto relative">
+              <Image
+                src="/about/lungs-icon.png"
+                width={320}
+                height={320}
+                alt="Powered by passion"
+                className="object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="text-center text-[25px]  ">
+            <h3 className="font-bold mb-7"> DEVIN ALTMAN</h3>
+
+            <div className="text-[20px] leading-7 ">
+              <p className="text-[20px]">Co-Founder</p>
+              <p>devin@02projects.com</p>
+              <p>(818) 312-5502</p>
+              <p>Los Angeles, CA 91367</p>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   )
