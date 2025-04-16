@@ -1,6 +1,6 @@
 "use client";
 import { IoMdArrowRoundUp } from "react-icons/io";
-import Image from "next/image";
+import Image from "next/image"; 
 
 export default function Text_Backround_Motion() {
   const data = [
