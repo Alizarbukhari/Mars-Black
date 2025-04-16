@@ -20,12 +20,12 @@ export default function ServicesSection({ nextSectionId = "next-section" }: Serv
     },
     {
       title: "Audience",
-      videoSrc: "/servies_images/havoc.mp4", // Replace with your new video path
+      videoSrc: "/servies_images/videos/1.mp4", // Replace with your new video path
       href: "/services/audience",
     },
     {
       title: "Network",
-      videoSrc: "/servies_images/raid2.mp4", // Replace with your new video path
+      videoSrc: "/servies_images/videos/2.mp4", // Replace with your new video path
       href: "/services/network",
     },
     {
