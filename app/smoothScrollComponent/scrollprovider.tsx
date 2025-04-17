@@ -1,5 +1,5 @@
 "use client"
-import React ,{useRef,useEffect,useLayoutEffect,useContext,useMemo,createContext,useState, Children} from 'react'
+import React ,{useRef,useEffect,useLayoutEffect,useContext,useMemo,createContext,useState} from 'react'
 import Lenis from '@studio-freight/lenis';
 
 const PageContext = createContext<{ lenis: Lenis | null }>({

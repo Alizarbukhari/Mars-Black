@@ -8,7 +8,7 @@ export default function About() {
         <div>
             <HeaderVideo />
         </div>
-        <div>
+\        <div>
           <StorySection />
         </div>
     </div>
