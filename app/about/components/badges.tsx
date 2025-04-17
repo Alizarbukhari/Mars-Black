@@ -1,69 +1,81 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import usepage from "../../smoothScrollComponent/scrollprovider"; // Adjust the import path as needed
+import usePage from "../../smoothScrollComponent/scrollprovider"; // Adjust the import path
 
-const scrollThreshold = 1545; // Set your desired scroll threshold (in pixels)
-
-const Badges: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState<boolean>(false);
-  const { lenis } = usepage();
+export const Badges = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const { lenis } = usePage();
 
   useEffect(() => {
-    if (!lenis) return;
+    if (!scrollRef.current) {
+      console.log("scrollRef is null"); // Debug if ref is null
+      return;
+    }
 
-    // Define the callback which checks the Lenis scroll position.
-    const onScroll = ({ scroll }: { scroll: number }) => {
-      console.log("Current Lenis scroll position:", scroll);
-      if (scroll >= scrollThreshold && !active) {
-        setActive(true);
-        console.log("Badge active! Scroll reached:", scroll);
-      } else if (scroll < scrollThreshold && active) {
-        setActive(false);
-        console.log("Badge inactive. Scroll below threshold:", scroll);
+    console.log("Setting up IntersectionObserver"); // Confirm setup
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        console.log("IntersectionObserver triggered", entry.isIntersecting); // Log visibility
+        setIsVisible(entry.isIntersecting); // Update state
+      },
+      {
+        root: null, // Use viewport
+        threshold: 0.3, // Trigger at 30% visibility
+        rootMargin: "0px",
       }
-    };
+    );
 
-    // Subscribe to Lenis scroll events.
-    lenis.on("scroll", onScroll);
+    observer.observe(scrollRef.current);
 
-    // Cleanup the event listener on unmount.
     return () => {
-      lenis.off("scroll", onScroll);
+      console.log("Cleaning up IntersectionObserver");
+      observer.disconnect();
     };
-  }, [lenis, active]);
+  }, []);
+
+  useEffect(() => {
+    console.log("isVisible changed:", isVisible); 
+    if (scrollRef.current) {
+      console.log("Class on container:", scrollRef.current.className); 
+    }
+  }, [isVisible]);
+
+  useEffect(() => {
+    console.log("Lenis instance:", lenis); 
+  }, [lenis]);
 
   return (
     <div
-      ref={containerRef}
-      className={`container w-full flex items-center justify-center py-16 mt-11 ${
-        active ? "active" : ""
-      }`}
+      ref={scrollRef}
+      className={`w-full flex items-center justify-center py-16 mt-11 `}
     >
-      <div className="item w-[250px] h-[250px]">
-        <Image
-          src="/about/la-icon.png"
-          alt="LA Icon"
-          width={481}
-          height={481}
-          className="h-full w-full"
-        />
-      </div>
-      <div className="hover-text text-[30px] font-bold">
-        LOS ANGELES | NEW YORK
-      </div>
-      <div className="item w-[250px] h-[250px]">
-        <Image
-          src="/about/ny-icon.png"
-          alt="NY Icon"
-          width={481}
-          height={481}
-          className="h-full w-full"
-        />
+      <div className={`container ${
+        isVisible ? "is-visible" : ""
+      }`}>
+        <div className="item w-[250px] h-[250px]">
+          <Image
+            src="/about/la-icon.png"
+            alt="LA Icon"
+            width={481}
+            height={481}
+            className="h-full w-full"
+          />
+        </div>
+        <div className="hover-text text-[30px] font-bold">
+          LOS ANGELES | NEW YORK
+        </div>
+        <div className="item w-[250px] h-[250px]">
+          <Image
+            src="/about/ny-icon.png"
+            alt="NY Icon"
+            width={481}
+            height={481}
+            className="h-full w-full"
+          />
+        </div>
       </div>
     </div>
   );
 };
-
-export default Badges;

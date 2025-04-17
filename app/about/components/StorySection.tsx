@@ -1,6 +1,5 @@
 import Image from "next/image"
-import  Badges  from "./badges";
-
+import { Badges } from "./badges"
 export default function StorySection() {
 
   return (
