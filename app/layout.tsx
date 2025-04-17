@@ -2,7 +2,6 @@ import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
 import { GeistSans, GeistMono } from 'geist/font'
-import { PageProvider } from "./smoothScrollComponent/scrollprovider"
 
 export const metadata: Metadata = {
   title: "Mars Black",
@@ -17,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased bg-black` }>
-        <PageProvider>   {children}</PageProvider>
+           {children}
       
       </body>
     </html>
